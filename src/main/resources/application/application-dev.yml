@@ -1,0 +1,100 @@
+server:
+  port: 9092
+
+
+datasource:
+  ygg_sale_platform_write:
+    lookupName: yggSalePlatformWrite
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/ygg_sale_platform?useUnicode=true&amp;characterEncoding=UTF8&amp;zeroDateTimeBehavior=convertToNull&amp;autoReconnect=true
+    username: root
+    password: 123456
+    initialSize: 3
+    minIdle: 3
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxPoolPreparedStatementPerConnectionSize: 20
+    filters: stat
+
+  ygg_sale_platform_read:
+    lookupName: yggSalePlatformWrite
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/ygg_sale_platform?useUnicode=true&amp;characterEncoding=UTF8&amp;zeroDateTimeBehavior=convertToNull&amp;autoReconnect=true
+    username: root
+    password: 123456
+    initialSize: 3
+    minIdle: 3
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxPoolPreparedStatementPerConnectionSize: 20
+    filters: stat
+
+  ygg_admin:
+    lookupName: yggAdmin
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/ygg_admin?useUnicode=true&amp;characterEncoding=UTF8&amp;zeroDateTimeBehavior=convertToNull&amp;autoReconnect=true
+    username: root
+    password: 123456
+    initialSize: 3
+    minIdle: 3
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxPoolPreparedStatementPerConnectionSize: 20
+    filters: stat
+
+zjeport:
+  api_url: http://122.224.230.4:18003/newyorkWS/ws/ReceiveEncryptDeclare
+  application_form_no: A33015600392016040000001
+  account_book_no: W29916000216
+  assure_company_code: MA27X5WK8
+  our_send_code: 91330101MA27X5WK89
+  our_aes_secret_key: gcLYjcm4yAh6zHzgNSvkBA==
+  our_rsa_public_key: MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANzovsPCFO+jOd5xzR01CsBPY2EeNzJSJlRxUVnTPdinvo0vb0dqGz/05GSee+TCOpub6aht2Tza8Nigad3tvGMCAwEAAQ==
+  our_rsa_private_key: MIIBVQIBADANBgkqhkiG9w0BAQEFAASCAT8wggE7AgEAAkEA3Oi+w8IU76M53nHNHTUKwE9jYR43MlImVHFRWdM92Ke+jS9vR2obP/TkZJ575MI6m5vpqG3ZPNrw2KBp3e28YwIDAQABAkEAoQtn7swxeRXUnS73akB96v61I1rkwGGVIeBOfx55qtQcPfwR4WUW/jjrmdzjBpse4ApT7qbxj8WexTDCQM9rmQIhAPSifEf6LEGbEKW2fUHY4tBRBDQuIE7cJI1dUhxkKjEHAiEA5ywVp48hwqD8Y9R3HUaByy7urwxIeHNfypitRPwzbsUCIQDiR9nFijadiJ1haud5nPBP2GCXE4N27lIxIHzvHgeYyQIgXlicod0Fn0RKnYep8XXEJSOLYD+4GAimUK4NETmI2C0CIAw61jFIDbEGr93K+9+Fzk3P+jb12+WIMzW5ZLGUG/PE
+  eport_aes_secret_key: qZe60QZFxuirub2ey4+7+Q==
+  eport_rsa_public_key: MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCffOeIVYut9jW5w1L5uKX4aDvd837a8JhaWm5S8YqNQfgEmfD9T+rDknXLqMT+DXeQAqGo4hBmcbej1aoMzn6hIJHk3/TfTAToNN8fgwDotHewsTCBbVkQWtDTby3GouWToVsRi1i/A0Vfb0+xM8MnF46DdhhrnZrycERBSbyrcwIDAQAB
+  our_company_code: 91330101MA27X5WK89
+  our_company_name: 杭州格享网络技术有限公司
+  wms_company_code: 330156K006
+  wms_company_name: 杭州海仓科技有限公司
+  logistics_yt_company_code: WL14122901
+  logistics_yt_company_name: 浙江圆通速递有限公司
+  logistics_sf_company_code: 595784712
+  logistics_sf_company_name: 浙江顺路物流有限公司
+  logistics_ems_company_code: 330198Z014
+  logistics_ems_company_name: 中国邮政速递物流股份有限公司杭州市分公司
+  logistics_ttk_company_code: 553448868
+  logistics_ttk_company_name: 天天快递有限公司
+  pay_ali_company_code: ZF14021901
+  pay_ali_company_name: 支付宝（中国）网络技术有限公司
+  pay_wx_company_code: ZF14120401
+  pay_wx_company_name: 财付通支付科技有限公司
+  customs_hangzhou: HANGZHOU
+  customs_zongshu: ZONGSHU
+
+hzhs:
+  api_url: http://120.55.84.19:81/interface_test/
+  wms_id: 3
+  stock_id: 19
+  owner_id: 91330101MA27X5WK89
